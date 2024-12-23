@@ -1,0 +1,55 @@
+{
+  "name": "running-wiki-cn",
+  "description": "A scraper for runningman.fandom.com",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "ts-node bin/cli.ts",
+    "prepare": "husky",
+    "lint": "biome check src bin --write",
+    "lint-staged": "lint-staged",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "install": "npm run build"
+  },
+  "author": {
+    "name": "gengarr",
+    "email": "97z4moon@gmail.com",
+    "url": "https://github.com/gengark"
+  },
+  "homepage": "https://github.com/gengark/running-wiki-cn#readme",
+  "repository": "git@github.com:gengark/running-wiki-cn.git",
+  "bugs": "https://github.com/gengark/running-wiki-cn/issue",
+  "keywords": [
+    "runningman",
+    "running-man",
+    "wiki",
+    "cli",
+    "nodejs"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.2",
+    "@types/pako": "^2.0.3",
+    "@types/yargs": "^17.0.33",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "ora": "^8.1.1",
+    "pako": "^2.1.0",
+    "yargs": "^17.7.2"
+  }
+}
